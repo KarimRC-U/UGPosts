@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo UGPOSTS"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle.Title"
+        android:text="Iniciar Sesión"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etLoginEmail"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="Correo"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etLoginPassword"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="16dp"
+        android:onClick="onLoginClick"
+        android:text="Iniciar Sesión" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle.Info"
+        android:text="¿No tienes cuenta?"
+        android:paddingBottom="8dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="8dp"
+        android:onClick="onRegisterClick"
+        android:text="Registrarse" />
+
+</LinearLayout>

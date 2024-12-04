@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/post_background">
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del evento"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/eventDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textSize="14sp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/eventDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha: inicio - fin"
+        android:textSize="12sp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/eventLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubicación"
+        android:textSize="12sp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/eventUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publicado por Usuario"
+        android:textSize="12sp"
+        android:textColor="#B3FFFFFF" />
+</LinearLayout>

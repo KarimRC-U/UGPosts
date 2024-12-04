@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo UGPOSTS"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            style="@style/TextStyle.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Registro" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/EditTextStyle"
+            android:autofillHints="name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Nombre Completo" />
+
+        <EditText
+            android:id="@+id/etUser"
+            style="@style/EditTextStyle"
+            android:autofillHints="name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Usuario"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/EditTextStyle"
+            android:autofillHints="emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="correo@ugto.mx"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <Spinner
+            android:id="@+id/spinnerRole"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/roles" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            style="@style/TextStyle.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:visibility="gone"
+            android:text="Si desea publicar y está encargado de algun área de la universidad, complete la información." />
+
+        <Spinner
+            android:id="@+id/spinnerArea"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="#FFFFFF"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:hint="Seleccionar área"
+            android:entries="@array/areas_universitarias" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            style="@style/ButtonStyle"
+            android:text="Registrarse"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    >
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorBar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo UGPOSTS"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPostType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noticia" />
+
+        <RadioButton
+            android:id="@+id/radioEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evento" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupPostType">
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Título"/>
+
+        <EditText
+            android:id="@+id/editTextContent"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:maxLines="15"
+            android:layout_marginBottom="5dp"
+            android:hint="Contenido"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/categories_array"
+            android:spinnerMode="dropdown"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupPostType">
+
+        <EditText
+            android:id="@+id/editTextEventName"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Evento"/>
+
+        <EditText
+            android:id="@+id/editTextEventDescription"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="5dp"
+            android:minLines="2"
+            android:maxLines="15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del Evento"/>
+
+        <TextView
+            android:id="@+id/textViewStartDate"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha y hora de inicio"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:onClick="showStartDateTimePicker" />
+
+        <TextView
+            android:id="@+id/textViewEndDate"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha y hora de fin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:onClick="showEndDateTimePicker" />
+
+        <EditText
+            android:id="@+id/editTextLocation"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ubicación"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorBar"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="@id/bottomBar">
+
+        <Button
+            android:id="@+id/btnPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Post" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Cancelar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UGposts"
+rootProject.name = "UGPosts"
 include(":app")
