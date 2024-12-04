@@ -1,5 +1,7 @@
 Proyecto Final de Sistemas de Administración de Datos
+
 Por Karim Rivera Calderón
+
 Docente: Valentina Ugarte Ortiz
 
 PostsUG - Aplicación para Android
