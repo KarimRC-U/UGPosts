@@ -18,5 +18,5 @@ MIN SDK 24 ‎Android 7
 
 Es posible ejecutar el proyecto mediante Android Studio o descargando e instalando el APK disponible en la carpeta "apk y db" en un dispositivo Android Compatible.
 
-Base de datos:
+Manejo de base de datos:
 https://github.com/KarimRC-U/UGPosts/blob/main/app/src/main/java/com/example/ugposts/DBHelper.kt
