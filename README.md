@@ -19,4 +19,4 @@ TARGET SDK 34
 MIN SDK 24 ‎Android 7
 
 
-Es posible ejecutar el proyecto mediante Android Studio o descargando e instalando el APK disponible en un dispositivo Android Compatible.
+Es posible ejecutar el proyecto mediante Android Studio o descargando e instalando el APK disponible en la carpeta "apk y db" en un dispositivo Android Compatible.
