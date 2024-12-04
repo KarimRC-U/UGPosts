@@ -8,7 +8,7 @@ Docente: Valentina Ugarte Ortiz
 PostsUG - Aplicación para Android
 Una aplicación para noticias, anuncios y eventos de la universidad, con el fin de compilar la informacion en un mismo lugar.
 
-El codigo consiste en un proyecto de Android Studio escrito en Kotlin.
+El codigo consiste en un proyecto de Android Studio escrito en Kotlin, para la base de datos se utilizó SQLITE y el sistema por defecto de bases de datos para Android.
 
 SDK Tools 36
 
